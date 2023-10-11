@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+.currentTime {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid blue;
+    background-color: lightblue;
+}
+
+.currentTime__title {
+    width: auto;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.currentTime__time {
+    width: auto;
+    font-size: 1.2rem;
+}

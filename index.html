@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>TP Web Elements</title>
+        <link rel="stylesheet" href="src/styles.css">
+        <script src="src/current-time.js" defer></script>
+    </head>
+
+    <body>
+        <template id="custom-details">
+            <details>
+                <summary>Cliquez pour ouvrir</summary>
+                <slot name="summary"></slot>
+                <slot name="content"></slot>
+                <div>Je suis le contenu détaillé</div>
+            </details>
+
+            <style>
+                ::slotted(span) {
+                    color: red;
+                }
+
+                ::slotted(ul) {
+                    font-style: italic;
+                }
+            </style>
+        </template>
+
+        <current-time></current-time>
+        <current-time format="utc"></current-time>
+
+        <screen-size></screen-size>
+
+        <custom-details>
+            <span slot="summary">Les 3 technologies des Web Components</span>
+            <ul slot="content">
+                <li>oui</li>
+                <li>non</li>
+            </ul>
+        </custom-details>
+    </body>
+</html>
